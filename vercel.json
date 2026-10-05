@@ -1,0 +1,9 @@
+{
+  "framework": "nextjs",
+  "regions": ["hkg1"],
+  "functions": {
+    "src/app/api/translate/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}
