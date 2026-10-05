@@ -73,6 +73,7 @@ export async function POST(request: NextRequest) {
   } catch (err) {
     const status = err instanceof Groq.APIError ? err.status : 502;
     const message = err instanceof Error ? err.message : "無法連線至翻譯服務";
+    console.error("[translate] upstream error", status, message);
     return NextResponse.json({ error: message }, { status });
   }
 }
